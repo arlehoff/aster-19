@@ -1,0 +1,18 @@
+class Piglet:
+	def __init__(self, arm_length: float, leg_length: float, num_eyes: int, has_tail: bool, is_furry: bool):
+		self.arm_length = arm_length
+		self.leg_length = leg_length 
+		self.num_eyes = num_eyes
+		self.has_tail = has_tail 
+		self.is_furry = is_furry
+	def describe(self):
+		print("Piglet physical characteristics:")
+		print(f"- Arm length: {self.arm_length} cm")
+		print(f"- Leg length: {self.leg_length} cm")
+		print(f"- Number of eyes: {self.num_eyes}")
+		print(f"- Has a tail: {'Yes' if self.has_tail else 'No'}")
+		print(f"- Furry: {'Yes' if self.is_furry else 'No'}")
+
+my_piglet = Piglet(arm_length=12.5, leg_length=15.0, num_eyes=2, has_tail=True, is_furry=False)
+
+my_piglet.describe()
