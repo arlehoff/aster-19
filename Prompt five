@@ -1,0 +1,30 @@
+import math
+
+def generate_x_values(start, end, num_points):
+    
+    step = (end - start) / (num_points - 1)
+    return [start + i * step for i in range(num_points)]
+
+def compute_sin_values(x_values):
+   
+    return [math.sin(x) for x in x_values]
+
+def print_table(x_values, sin_values):
+    
+    print(f"{'x':>15} {'sin(x)':>15}")
+    print("-" * 31)
+    for x, sin_x in zip(x_values, sin_values):
+        print(f"{x:15.10f} {sin_x:15.10f}")
+
+def main():
+    
+    start = 0
+    end = 2 * math.pi
+    num_points = 1000
+
+    x_values = generate_x_values(start, end, num_points)
+    sin_values = compute_sin_values(x_values)
+    print_table(x_values, sin_values)
+
+if __name__ == "__main__":
+    main()
